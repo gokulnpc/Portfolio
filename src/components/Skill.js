@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 
 export const Skill = ({ title, imgUrl }) => {
     return (
-        <Col size={12} sm={3} md={1}>
+        <Col size={12} sm={6} md={1}>
             <div className="skill-imgbx">
                 <img
                     src={imgUrl}
