@@ -1,0 +1,68 @@
+.about-container {
+    background: #000;
+    /* or any other color */
+    color: #fff;
+    /* or any other color */
+    font-family: 'Open Sans', sans-serif;
+    /* This is just an example */
+    /* padding: 40px 80px; */
+    padding: 50px 0 150px;
+    /* Adjust the padding as needed */
+    line-height: 1.6;
+    /* Adjust line height for readability */
+    background: #121212;
+}
+
+.title span {
+    /* font-size: 1.5em; */
+    display: inline-block;
+    animation: waveAnimation 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.0001s);
+    /* Delay based on the letter index */
+
+}
+
+.about-heading {
+    font-size: 2.5em;
+    /* Large, attention-grabbing title */
+    margin-bottom: 0.8em;
+    /* Space between the heading and the text */
+    color: #e0e0e0;
+    /* A slightly lighter color */
+    text-align: center;
+    /* Center align the heading */
+    font-weight: bold;
+}
+
+.about-description {
+    font-size: 1.2em;
+    /* Comfortable reading size */
+    margin-bottom: 1.2em;
+    /* Space between paragraphs */
+    max-width: 85%;
+    /* Max width to maintain optimal line length */
+    margin-left: auto;
+    /* Center the paragraphs */
+    margin-right: auto;
+    /* Center the paragraphs */
+    text-align: justify;
+    /* Justify the text for a polished look */
+}
+
+/* Add media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px 40px;
+        /* Smaller padding on smaller screens */
+    }
+
+    .about-heading {
+        font-size: 2em;
+        /* Smaller heading on smaller screens */
+    }
+
+    .about-description {
+        font-size: 0.75em;
+        /* Smaller text on smaller screens */
+    }
+}

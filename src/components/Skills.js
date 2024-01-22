@@ -1,5 +1,8 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { Skill } from "./Skill";
+import React, { useState } from 'react';
+import './Skills.css';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'; // You may need to install react-tabs
+import 'react-tabs/style/react-tabs.css';
+
 import projImg1 from "../assets/img/project-img1.png";
 import Solidity from "../assets/img/Solidity.svg";
 import projImg2 from "../assets/img/project-img2.png";
@@ -30,136 +33,109 @@ import solana from "../assets/img/solana.svg";
 import polygon from "../assets/img/polygon.svg";
 import tron from "../assets/img/tron.svg";
 import html from "../assets/img/html.svg";
-export const Skills = () => {
 
-  const projects = [
-    {
-      title: "Solidity",
-      imgUrl: Solidity,
-    },
-    {
-      title: "JavaScript",
-      imgUrl: js,
-    },
-    {
-      title: "TypeScript",
-      imgUrl: ts,
-    },
-    {
-      title: "Node.js",
-      imgUrl: node,
-    },
-    {
-      title: "React",
-      imgUrl: react,
-    },
-    {
-      title: "Ethereum",
-      imgUrl: eth,
-    },
-    {
-      title: "Solana",
-      imgUrl: solana,
-    },
-    {
-      title: "Polygon",
-      imgUrl: polygon,
-    },
-    {
-      title: "Tron",
-      imgUrl: tron,
-    },
-    {
-      title: "Metamask",
-      imgUrl: metamask,
-    },
-    {
-      title: "Hardhat",
-      imgUrl: hardhat,
-    },
-    {
-      title: "Truffle",
-      imgUrl: truffle,
-    },
-    {
-      title: "IPFS",
-      imgUrl: ipfs,
-    },
-    {
-      title: "Ganache",
-      imgUrl: ganache,
-    },
-    {
-      title: "OpenZeppelin",
-      imgUrl: oz,
-    },
-    {
-      title: "Web3",
-      imgUrl: web3,
-    },
-    {
-      title: "ChatGPT",
-      imgUrl: chatgpt,
-    },
-    {
-      title: "HTML",
-      imgUrl: html,
-    },
-    {
-      title: "C++",
-      imgUrl: c,
-    },
-    {
-      title: "Java",
-      imgUrl: java,
-    },
-    {
-      title: "Git",
-      imgUrl: git,
-    },
-    {
-      title: "npm",
-      imgUrl: npm,
-    },
-    {
-      title: "Mongodb",
-      imgUrl: mongo,
-    },
-    {
-      title: "Rust",
-      imgUrl: rust,
-    },
-  ];
+import python from "../assets/img/python.png";
+import database from "../assets/img/database.png";
+import hedera from "../assets/img/hedera.png";
+import binance from "../assets/img/binance.png";
+import ex from "../assets/img/exp.png";
+import panda from "../assets/img/pandas.png";
+import numpy from "../assets/img/numpy.png";
+import mat from "../assets/img/mat.png";
+import sci from "../assets/img/sci.jpg";
+import tns from "../assets/img/tns.png";
+import postman from "../assets/img/postman.png";
+const Skills = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const skillsData = {
+    "Blockchain Technologies": [
+      { name: 'Solidity', icon: Solidity },
+      { name: 'Hardhat', icon: hardhat },
+      { name: 'Truffle', icon: truffle },
+      { name: 'IPFS', icon: ipfs },
+      { name: 'Metamask', icon: metamask },
+      { name: 'Web3.js', icon: web3 },
+      { name: 'Ganache', icon: ganache }
+      // ... other skills with their respective data
+    ],
+
+    "Blockchain Networks": [
+      { name: 'Ethereum', icon: eth },
+      { name: 'Polygon', icon: polygon },
+      { name: 'Solana', icon: solana },
+      { name: 'Hedera', icon: hedera },
+      { name: 'Binance', icon: binance }
+    ],
+
+    "Programming Languages": [
+      { name: 'JavaScript', icon: js },
+      { name: 'Python', icon: python },
+      { name: 'MySQL', icon: database },
+      { name: 'C++', icon: c },
+      { name: 'HTML', icon: html },
+    ],
+
+    "Frameworks and Tools": [
+      { name: 'ReactJS', icon: react },
+      { name: 'Node.js', icon: node },
+      { name: 'Express.js', icon: ex },
+      { name: 'MongoDB', icon: mongo },
+      { name: 'Git', icon: git },
+      { name: 'NPM', icon: npm },
+      { name: 'Postman', icon: postman },
+    ],
+
+    "Machine Learning": [
+      { name: 'Pandas', icon: panda },
+      { name: 'NumPy', icon: numpy },
+      { name: 'Matplotlib', icon: mat },
+      { name: 'Scikit-Learn', icon: sci },
+      { name: 'TensorFlow', icon: tns },
+      { name: 'ChatGPT', icon: chatgpt }
+    ]
+    // ... other categories with their skills
+  };
+
+  const getSkillCards = (skills) => {
+    return skills.map((skill, index) => (
+      <div key={index} className="skill-card">
+        <img src={skill.icon} alt={skill.name} className="skill-icon" />
+        <h3 className="skill-name">{skill.name}</h3>
+      </div>
+    ));
+  };
+
+  const tabStyle = {
+    textDecoration: 'none', // This will remove the underline
+    // Add any other styles you want here
+  };
+
+  // ...
+
+
+
 
   return (
-    <section className="project skills" id="skills">
-      <Container>
-        <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>Skills</h2>
-                  <p>What I Can Do!</p>
-                  <Row>
-                    {
-                      projects.map((project, index) => {
-                        return (
-                          <Skill
-                            key={index}
-                            {...project}
-                          />
-                        )
-                      })
-                    }
-                  </Row>
+    <section className="skills-container">
+      <h1 className="about-heading title"><span>My Tech Stack 🚀</span></h1>
+      <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
+        <TabList>
+          {Object.keys(skillsData).map((category, index) => (
+            <Tab style={tabStyle} key={index}>{category}</Tab>
+          ))}
+        </TabList>
 
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+        {Object.values(skillsData).map((skills, index) => (
+          <TabPanel key={index}>
+            <div className="grid-container">
+              {getSkillCards(skills)}
+            </div>
+          </TabPanel>
+        ))}
+      </Tabs>
     </section>
-  )
-}
+  );
+};
+
+export default Skills;

@@ -1,0 +1,81 @@
+.experience-container {
+    background-color: #121212;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+    padding: 50px;
+    /* Padding around the content */
+    font-family: 'Open Sans', sans-serif;
+    /* Font family */
+}
+
+.experience-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.experience-card {
+    background-color: #1e1e1e;
+    /* Slightly lighter dark shade for the card */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* Space between cards */
+}
+
+.experience-company {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.experience-details {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.experience-skills {
+    list-style: none;
+    /* Remove list bullets */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.experience-skills li {
+    display: inline-block;
+    /* Display skills inline */
+    background-color: #333333;
+    /* Dark background for skill tags */
+    color: #bbbbbb;
+    /* Light text for skill tags */
+    padding: 5px 10px;
+    margin-right: 10px;
+    /* margin-bottom: 10px; */
+    /* Space between skill tags */
+    border-radius: 4px;
+    /* Rounded corners for skill tags */
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        padding: 20px;
+        /* Smaller padding on smaller screens */
+    }
+
+    .experience-heading {
+        font-size: 1.5rem;
+        /* Smaller heading on smaller screens */
+    }
+
+    .experience-card {
+        padding: 15px;
+        /* Smaller padding on smaller screens */
+    }
+
+    .experience-skills li {
+
+        margin-bottom: 10px;
+
+    }
+}

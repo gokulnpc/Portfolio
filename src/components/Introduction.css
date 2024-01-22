@@ -1,0 +1,253 @@
+.introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+    padding: 40px 10%;
+    /* Responsive padding */
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* position: fixed; */
+    /* Ensure it takes at least full viewport height */
+}
+
+
+
+
+.text-container {
+    text-align: left;
+    max-width: 600px;
+    /* Adjust as needed */
+}
+
+.greeting {
+    font-size: 1.5em;
+    /* Adjusted greeting size */
+    font-weight: normal;
+}
+
+@keyframes waveAnimation {
+
+    0%,
+    100% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+}
+
+.name span {
+    display: inline-block;
+    animation: waveAnimation 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.0001s);
+
+    /* Delay based on the letter index */
+}
+
+.cursor {
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.tagline {
+    font-size: 1.2em;
+    /* Adjusted tagline size */
+    font-weight: lighter;
+    /* Lighter font weight for tagline */
+    margin-bottom: 20px;
+    /* Space below tagline */
+    display: inline-block;
+    /* display: none; */
+}
+
+.resume-link {
+    text-decoration: none;
+    /* Remove underline from link */
+}
+
+.resume-button {
+    background-color: #fff;
+    /* Button background */
+    color: #000;
+    /* Button text color */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0;
+    /* Space around button */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-button:hover,
+.resume-button:focus {
+    background-color: #000;
+    /* Hover background color: black */
+    color: #fff;
+    /* Hover text color: white */
+}
+
+.resume-button svg {
+    margin-right: 10px;
+    /* Space between icon and button text */
+}
+
+.email {
+    margin: 20px 0;
+    /* Space around email */
+}
+
+.social-links {
+    list-style-type: none;
+    /* Remove list bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 20px 0;
+    /* Space around social links */
+    display: flex;
+    justify-content: left;
+    /* Center social links */
+}
+
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    /* Space between links */
+}
+
+.profile-picture {
+    width: 150px;
+    /* Adjusted for smaller screens */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Space below picture */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgb(85, 255, 0);
+    /* Starting color */
+    position: relative;
+    /* For z-index */
+    z-index: 2;
+    /* Ensures border is above any background elements */
+    animation: rainbow 8s infinite linear;
+    /* Apply the rainbow animation */
+
+}
+
+.profile-picture::before,
+.profile-picture::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove any extra space below the image */
+}
+
+@keyframes rainbow {
+    0% {
+        border-color: white;
+    }
+
+    /* GreenYellow */
+    25% {
+        border-color: #d8ff89;
+    }
+
+    /* YellowGreen */
+    50% {
+        border-color: #aaff00;
+    }
+
+    /* OliveDrab */
+    75% {
+        border-color: #d7ff93;
+    }
+
+    /* DarkOliveGreen */
+    100% {
+        border-color: #ebffcd;
+    }
+
+    /* GreenYellow */
+}
+
+/* Additional media query for larger screens if needed */
+@media (min-width: 768px) {
+    .introduction-container {
+        flex-direction: row;
+        /* Align items horizontally */
+        padding: 0px;
+        /* Increase padding */
+    }
+
+    .text-container {
+        text-align: left;
+        /* Align text to the left */
+        padding-right: 50px;
+        /* Space before the profile picture */
+        max-width: none;
+        /* Use full width */
+    }
+
+    .name {
+        font-size: 4em;
+        /* Large font size for the name */
+    }
+
+    .tagline {
+        font-size: 1.5em;
+
+        /* Adjust tagline size */
+    }
+
+    .profile-picture {
+        width: 320px;
+        /* Larger size for larger screens */
+        height: 320px;
+        margin-bottom: 0;
+        /* Remove space below picture */
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        /* Align social links to the start */
+    }
+}

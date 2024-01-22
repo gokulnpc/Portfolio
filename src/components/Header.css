@@ -1,0 +1,200 @@
+.introduction-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    /* Dark background */
+    color: #fff;
+    /* White text */
+    padding: 50px 10%;
+    /* Responsive padding */
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* Ensure it takes at least full viewport height */
+}
+
+.text-container {
+    flex-grow: 1;
+    padding-right: 50px;
+    /* Space before the profile picture */
+}
+
+.greeting {
+    margin: 0;
+    font-size: 1.5em;
+    /* Adjusted greeting size */
+    font-weight: normal;
+}
+
+.name {
+    margin: 20px 0;
+    /* Adjusted space around name */
+    font-size: 4em;
+    /* Large, bold font for the name */
+    font-weight: bold;
+    line-height: 1.1;
+    /* Tighter line height for large text */
+}
+
+.tagline {
+    margin-bottom: 20px;
+    /* Adjusted space below tagline */
+    font-size: 1.5em;
+    /* Adjusted tagline size */
+    font-weight: lighter;
+    /* Lighter font weight for tagline */
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* Button background */
+    color: #000;
+    /* Button text color */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Space below button */
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    /* If you use <a> instead of <button> */
+}
+
+.resume-button:hover,
+.resume-button:focus {
+    background-color: #e1e1e1;
+    /* Lighter background on hover/focus */
+}
+
+.resume-button svg {
+    margin-right: 10px;
+    /* Space between icon and button text */
+}
+
+.email {
+    margin: 20px 0;
+    font-size: 1em;
+    /* Adjusted email size */
+}
+
+.social-links {
+    display: flex;
+    list-style-type: none;
+    /* Remove list bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+    font-size: 1em;
+    /* Adjusted font size for links */
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    /* Space between links */
+}
+
+@keyframes rainbow {
+    0% {
+        border-color: #adff2f;
+    }
+
+    /* GreenYellow */
+    25% {
+        border-color: #9acd32;
+    }
+
+    /* YellowGreen */
+    50% {
+        border-color: #6b8e23;
+    }
+
+    /* OliveDrab */
+    75% {
+        border-color: #556b2f;
+    }
+
+    /* DarkOliveGreen */
+    100% {
+        border-color: #adff2f;
+    }
+
+    /* GreenYellow */
+}
+
+.profile-picture {
+    width: 30%;
+    /* Increased width */
+    height: 30%;
+    /* Increased height */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    /* Center the image if necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid red;
+    /* Starting color */
+    animation: rainbow 8s infinite linear;
+    /* Apply the rainbow animation */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove any extra space below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .introduction-container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: flex-start;
+        /* Align items to the start (left) */
+    }
+
+    .text-container {
+        /* Align text to the left */
+        text-align: left;
+        padding: 0;
+        /* Remove padding if any */
+        margin-bottom: 20px;
+        /* Add some space below the text before the image */
+    }
+
+    .profile-picture {
+        /* Center the image above the button */
+        align-self: center;
+        /* Center align the image container */
+        margin-bottom: 20px;
+        /* Add space below the image before the button */
+    }
+
+    .resume-button {
+        align-self: center;
+        /* Center align the button */
+    }
+
+    .social-links {
+        /* Align social links to the start (left) or center if preferred */
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        /* Add space below social links */
+    }
+
+    .social-links a {
+        /* Adjust if needed to increase tap target size on mobile */
+        padding: 5px;
+        /* Larger padding for easier tapping */
+    }
+}

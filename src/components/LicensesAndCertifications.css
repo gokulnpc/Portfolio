@@ -1,0 +1,77 @@
+.cert-container {
+    background-color: black;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+    padding: 40px;
+    text-align: center;
+}
+
+.cert-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.cert-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cert-card {
+    width: 22%;
+    background-color: #333;
+    /* Slightly lighter than container background for contrast */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    /* subtle hover effect */
+}
+
+.cert-name {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.cert-details,
+.cert-id,
+.cert-skills {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.cert-preview img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cert-link {
+    display: inline-block;
+    background-color: #4caf50;
+    /* A green button */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .cert-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cert-card {
+        width: auto;
+        /* Full width on small screens */
+    }
+}
