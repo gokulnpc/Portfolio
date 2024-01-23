@@ -16,18 +16,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: stretch;
     gap: 20px;
 }
 
 .cert-card {
     width: 22%;
-    background-color: #333;
+    /* background-color: white; */
     /* Slightly lighter than container background for contrast */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* subtle shadow for depth */
     transition: transform 0.3s ease;
+    /* make the height of all cards 100% of their container */
+
 }
 
 .cert-card:hover {
@@ -49,8 +51,13 @@
 
 .cert-preview img {
     max-width: 100%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin-bottom: 10px;
+    height: auto;
+    /* adjust height automatically */
+    max-height: 100%;
+    /* make sure the image is not taller than the card */
+    border-radius: 0;
 }
 
 .cert-link {
