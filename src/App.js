@@ -19,6 +19,7 @@ function App() {
       <Skills />
       <MyExperience />
       <LicensesAndCertifications />
+      <Contact />
     </div>
   );
 }

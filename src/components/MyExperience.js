@@ -80,7 +80,7 @@ const MyExperience = () => {
                 <div key={index} className="experience-card">
                     <h3 className="experience-company">{exp.company}</h3>
                     <p className="experience-details">
-                        {exp.role} | {exp.timeFrame} | {exp.location}
+                        🧑‍💻 {exp.role} | 📅 {exp.timeFrame} | 📌 {exp.location}
                     </p>
                     <ul className="experience-skills">
                         {exp.skills.map((skill, skillIndex) => (
