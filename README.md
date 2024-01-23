@@ -6,3 +6,13 @@
 <img width="960" alt="image" src="https://github.com/gokulnpc/Portfolio/assets/105941681/10e9a84f-b55c-42a5-9093-4a444ca26b0b">
 
 <img width="960" alt="image" src="https://github.com/gokulnpc/Portfolio/assets/105941681/cd7ad45f-698d-49c3-92ea-b0a40e934711">
+
+Built using:
+
+- Front-end library: React
+- CSS framework: React-bootstrap
+- CSS animations library: Animate.css
+
+In the /Portfolio, you can run:
+
+### `npm start`
