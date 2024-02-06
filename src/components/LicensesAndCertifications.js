@@ -9,6 +9,12 @@ import './LicensesAndCertifications.css';
 import aiml from "../assets/certs/aiml.png";
 import ibm from "../assets/certs/ibm.png";
 import web from "../assets/certs/web.png";
+import mdpi from "../assets/certs/mdpi.png";
+import iitm from "../assets/certs/iitm.png";
+import postman from "../assets/certs/postman.png";
+import nndp from "../assets/certs/nn&dp.png";
+import dv from "../assets/certs/dv.png";
+import Pandas from "../assets/certs/Pandas.png";
 import { ArrowLeftShort, ArrowRightShort } from 'react-bootstrap-icons';
 
 const licensesAndCertifications = [
@@ -25,24 +31,28 @@ const licensesAndCertifications = [
         certificatePreview: web, // Replace with the imported image if available
     },
     {
-        title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
-        certificatePreview: aiml, // Replace with the imported image if available
+        title: "Certificate of Acceptance MDPI Reseach Paper",
+        certificatePreview: mdpi, // Replace with the imported image if available
     },
     {
-        title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
-        certificatePreview: aiml, // Replace with the imported image if available
+        title: "Blockchain & Cryptocurrency: IIT Madras CCE",
+        certificatePreview: iitm, // Replace with the imported image if available
     },
     {
-        title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
-        certificatePreview: aiml, // Replace with the imported image if available
+        title: "Postman API Fundamentals Student Expert",
+        certificatePreview: postman, // Replace with the imported image if available
     },
     {
-        title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
-        certificatePreview: aiml, // Replace with the imported image if available
+        title: "Neural Networks and Deep Learning",
+        certificatePreview: nndp, // Replace with the imported image if available
     },
     {
-        title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
-        certificatePreview: aiml, // Replace with the imported image if available
+        title: "Data Visualization",
+        certificatePreview: dv, // Replace with the imported image if available
+    },
+    {
+        title: "Pandas",
+        certificatePreview: Pandas, // Replace with the imported image if available
     },
     // Add other certification objects here
 ];

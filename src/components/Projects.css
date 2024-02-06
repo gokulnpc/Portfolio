@@ -1,0 +1,113 @@
+.projects-container {
+  background-color: #1a1a1a;
+  /* Dark background */
+  color: #ffffff;
+  /* White text */
+  padding: 40px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  /* grid-template-columns: 2fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 20px;
+}
+
+.project-card {
+  /* display: flex; */
+  /* Add this line */
+  background-color: #333;
+  /* Lighter grey for card */
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  background-color: #444;
+  /* Slightly lighter on hover */
+}
+
+.project-image {
+  flex: 1;
+  /* Add this line */
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-details {
+  flex: 1;
+  /* Add this line */
+  padding-top: 20px;
+  /* padding-left: 50px; */
+  text-align: left;
+  /* Align project details to the left */
+}
+
+
+
+.project-details a {
+  background-color: #4caf50;
+  /* Green button */
+  color: #fff;
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-top: auto;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* This will push the footer to the bottom */
+  background-color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  /* This ensures that the border-radius applies to the image as well */
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  /* This will put space between your GitHub and Website buttons */
+  padding: 10px;
+}
+
+.project-footer a {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  /* Adjust width as necessary */
+  flex: 1;
+  /* This will make the buttons take up equal space */
+  text-align: center;
+  /* This will center the text inside the buttons */
+  margin: 0 5px;
+  /* This gives a little space between the two buttons */
+}
+
+/* Adjustments for the image and details section */
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 20px;
+  text-align: left;
+}
