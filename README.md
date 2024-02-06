@@ -1,4 +1,7 @@
 # Personal Portfolio Website in React
+<img width="960" alt="image" src="https://github.com/gokulnpc/Portfolio/assets/105941681/99b57010-6baf-4e9f-83f4-81995e9c7b9f">
+
+<img width="960" alt="image" src="https://github.com/gokulnpc/Portfolio/assets/105941681/d2cf0db1-f3f4-4a6a-ade8-243f8cc56247">
 
 <img width="960" alt="image" src="https://github.com/gokulnpc/Portfolio/assets/105941681/99b57010-6baf-4e9f-83f4-81995e9c7b9f">
 
@@ -14,6 +17,7 @@ Built using:
 - CSS framework: React-bootstrap
 - CSS animations library: Animate.css
 
+In the /Portfolio, you can run:
 In the /Portfolio, you can run:
 
 ### `npm start`
